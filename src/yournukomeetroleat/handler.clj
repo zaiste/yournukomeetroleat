@@ -20,7 +20,7 @@
 (defn datetime [date-str]
   (f/parse custom-formatter date-str))
 
-(defn per-date [datetime member]
+(defn per-date [datetime & member]
   (let [w (week datetime)]
     (let [result (zipmap (nth (combo/permutations members) w) role-pairs)]
       (if member result result))))
