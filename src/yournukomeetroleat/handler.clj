@@ -36,3 +36,7 @@
   (-> (handler/api app-routes)
       (middleware/wrap-json-body)
       (middleware/wrap-json-response)))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty app {:port port})))

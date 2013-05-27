@@ -1,1 +1,1 @@
-web: lein ring server-headless $PORT
+web: lein with-profile production trampoline run -m yournukomeetroleat.handler $PORT
