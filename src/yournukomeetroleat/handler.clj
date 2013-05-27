@@ -1,5 +1,6 @@
 (ns yournukomeetroleat.handler
   (:use compojure.core)
+  (:use [ring.adapter.jetty :only [run-jetty]])
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
             [clojure.math.combinatorics :as combo]
